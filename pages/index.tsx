@@ -1,27 +1,18 @@
-import {
-  Button,
-  Flex,
-  Heading,
-  Input,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import Header from "../components/Header";
+import Header from "@/components/Header";
+import { Box } from "@chakra-ui/react";
+import AboutSection from "./about";
+import ContactForm from "./contact";
+import Projects from "./projects";
+import SkillsSection from "./skills";
 
-const IndexPage = () => {
-  const { toggleColorMode } = useColorMode();
-  const backgroundCol = useColorModeValue("brand.100", "gray.700");
-
-  return (
-    <Flex
-      height="100vh"
-      alignItems="center"
-      justifyContent="center"
-      background={backgroundCol}
-    >
-      <Header />
-    </Flex>
-  );
-};
+const IndexPage = () => (
+  <Box alignItems="center" justifyContent="center">
+    <Header />
+    <AboutSection />
+    <SkillsSection />
+    <Projects />
+    <ContactForm />
+  </Box>
+);
 
 export default IndexPage;

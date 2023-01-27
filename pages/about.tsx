@@ -1,14 +1,19 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import { Box, Heading } from "@chakra-ui/react";
 
-const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">Go home</Link>
-    </p>
-  </Layout>
-)
+const AboutSection = () => {
+  return (
+    <Box
+      border="1px solid blue"
+      height="40vh"
+      alignItems="center"
+      display="grid"
+      width={["100%"]}
+    >
+      <Heading as="h1" size="xl" textAlign="center" pb={11}>
+        This is an About Section
+      </Heading>
+    </Box>
+  );
+};
 
-export default AboutPage
+export default AboutSection;
